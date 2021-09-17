@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infilling</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Varela+Round&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Literata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./assets/js/index.js"></script>
+</head>
+
+<body>
+  <header class="page-header">
+    <h1 class="">Variable-Length Piano Infilling</h1>
+    <h2 class="">Fill in the gap between the past and the future contexts with different number of notes</h2>
+    <a class="page-header__link" target='_blank' href="https://github.com/reichang182/variable-length-piano-infilling">
+      Github</a>
+    <a class="page-header__link" target='_blank' href="https://arxiv.org/pdf/2108.05064.pdf">
+      Paper</a>
+
+  </header>
+  <main>
+    <section id="inpainted-music">
+      <h2>Music infilled by different models</h2>
+      <p>Examples of the infilling result of our model and the two baselines when the past and the future contexts are
+        four bars apart. While our model can indeed infill the missing segment with four bars long as expected, both ILM
+        and FELIX tend to generate much shorter segments.</p>
+      <p>Note: If you are browsing this page using an iPhone, please remember to turn the silent mode off through the
+        switch on the side of your iPhone.</p>
+      <section id="inpainted-music-song1">
+        <h3>Song 01</h3>
+        <div class='anchor-container'>
+          <a class='selected'
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song01/song01_Ours_2track.midi">Ours</a>
+          <a
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song01/song01_FELIX_2track.midi">FELIX</a>
+          <a
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song01/song01_ILM_2track.midi">ILM</a>
+        </div>
+        <midi-visualizer id='inpainted-music-song1-visualizer'
+          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song01/song01_Ours_2track.midi">
+        </midi-visualizer>
+        <midi-player id='inpainted-music-song1-player'
+          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song01/song01_Ours_2track.midi"
+          sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+          visualizer="#inpainted-music-song1-visualizer">
+        </midi-player>
+      </section>
+      <section id="inpainted-music-song2">
+        <h3>Song 02</h3>
+        <div class='anchor-container'>
+          <a class='selected'
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song02/song02_Ours_2track.midi">Ours</a>
+          <a
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song02/song02_FELIX_2track.midi">FELIX</a>
+          <a
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song02/song02_ILM_2track.midi">ILM</a>
+        </div>
+        <midi-visualizer id='inpainted-music-song2-visualizer'
+          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song02/song02_Ours_2track.midi">
+        </midi-visualizer>
+        <midi-player id='inpainted-music-song2-player'
+          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song02/song02_Ours_2track.midi"
+          sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+          visualizer="#inpainted-music-song2-visualizer">
+        </midi-player>
+      </section>
+      <section id="inpainted-music-song3">
+        <h3>Song 03</h3>
+        <div class='anchor-container'>
+          <a class='selected'
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song03/song03_Ours_2track.midi">Ours</a>
+          <a
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song03/song03_FELIX_2track.midi">FELIX</a>
+          <a
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song03/song03_ILM_2track.midi">ILM</a>
+        </div>
+        <midi-visualizer id='inpainted-music-song3-visualizer'
+          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song03/song03_Ours_2track.midi">
+        </midi-visualizer>
+        <midi-player id='inpainted-music-song3-player'
+          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song03/song03_Ours_2track.midi"
+          sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+          visualizer="#inpainted-music-song3-visualizer">
+        </midi-player>
+      </section>
+      <section id="inpainted-music-song4">
+        <h3>Song 04</h3>
+        <div class='anchor-container'>
+          <a class='selected'
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song04/song04_Ours_2track.midi">Ours</a>
+          <a
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song04/song04_FELIX_2track.midi">FELIX</a>
+          <a
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song04/song04_ILM_2track.midi">ILM</a>
+        </div>
+        <midi-visualizer id='inpainted-music-song4-visualizer'
+          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song04/song04_Ours_2track.midi">
+        </midi-visualizer>
+        <midi-player id='inpainted-music-song4-player'
+          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song04/song04_Ours_2track.midi"
+          sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+          visualizer="#inpainted-music-song4-visualizer">
+        </midi-player>
+      </section>
+    </section>
+
+    <section id='controll-number-of-bars'>
+      <h2>Music infilled by our model to have a different number of bars</h2>
+      <p>We can decide how many bars we want our model to infill in the missing segment. Here, we provide examples of
+        our
+        models to generate 1 bar to 4 bars to connect the contexts.</p>
+      <section id="controll-number-of-bars-song1">
+        <h3>Song 01</h3>
+        <div class='anchor-container'>
+          <a class='selected'
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song01/song01_13bars_2track.midi">1
+            Bar</a>
+          <a
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song01/song01_14bars_2track.midi">2
+            Bars</a>
+          <a
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song01/song01_15bars_2track.midi">3
+            Bars</a>
+          <a
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song01/song01_16bars_2track.midi">4
+            Bars</a>
+        </div>
+        <midi-visualizer id='controll-number-of-bars-song1-visualizer'
+          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song01/song01_13bars_2track.midi">
+        </midi-visualizer>
+        <midi-player id='controll-number-of-bars-song1-player'
+          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song01/song01_13bars_2track.midi"
+          sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+          visualizer="#controll-number-of-bars-song1-visualizer">
+        </midi-player>
+      </section>
+      <section id="controll-number-of-bars-song2">
+        <h3>Song 02</h3>
+        <div class='anchor-container'>
+          <a class='selected'
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song02/song02_13bars_2track.midi">1
+            Bar</a>
+          <a
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song02/song02_14bars_2track.midi">2
+            Bars</a>
+          <a
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song02/song02_15bars_2track.midi">3
+            Bars</a>
+          <a
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song02/song02_16bars_2track.midi">4
+            Bars</a>
+        </div>
+        <midi-visualizer id='controll-number-of-bars-song2-visualizer'
+          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song02/song02_13bars_2track.midi">
+        </midi-visualizer>
+        <midi-player id='controll-number-of-bars-song2-player'
+          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song02/song02_13bars_2track.midi"
+          sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+          visualizer="#controll-number-of-bars-song2-visualizer">
+        </midi-player>
+      </section>
+      <section id="controll-number-of-bars-song3">
+        <h3>Song 03</h3>
+        <div class='anchor-container'>
+          <a class='selected'
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song03/song03_13bars_2track.midi">1
+            Bar</a>
+          <a
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song03/song03_14bars_2track.midi">2
+            Bars</a>
+          <a
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song03/song03_15bars_2track.midi">3
+            Bars</a>
+          <a
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song03/song03_16bars_2track.midi">4
+            Bars</a>
+        </div>
+        <midi-visualizer id='controll-number-of-bars-song3-visualizer'
+          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song03/song03_13bars_2track.midi">
+        </midi-visualizer>
+        <midi-player id='controll-number-of-bars-song3-player'
+          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song03/song03_13bars_2track.midi"
+          sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+          visualizer="#controll-number-of-bars-song3-visualizer">
+        </midi-player>
+      </section>
+      <section id="controll-number-of-bars-song4">
+        <h3>Song 04</h3>
+        <div class='anchor-container'>
+          <a class='selected'
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song04/song04_13bars_2track.midi">1
+            Bar</a>
+          <a
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song04/song04_14bars_2track.midi">2
+            Bars</a>
+          <a
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song04/song04_15bars_2track.midi">3
+            Bars</a>
+          <a
+            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song04/song04_16bars_2track.midi">4
+            Bars</a>
+        </div>
+        <midi-visualizer id='controll-number-of-bars-song4-visualizer'
+          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song04/song04_13bars_2track.midi">
+        </midi-visualizer>
+        <midi-player id='controll-number-of-bars-song4-player'
+          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song04/song04_13bars_2track.midi"
+          sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+          visualizer="#controll-number-of-bars-song4-visualizer">
+        </midi-player>
+      </section>
+    </section>
+    <footer class="site-footer">
+      <span class="site-footer-credit">We use
+        <a target='_blank' href='https://github.com/cifkao/html-midi-player'>html_midi_player</a>
+        built and kindly shared publicly by
+        <a target='_blank' href="https://ondrej.cifka.com">Ondřej Cífka</a>
+        for visualizing the piano rolls of the MIDI files. We have also made this implementation
+        of the website public at the <a target='_blank'
+          href="https://github.com/jackyhsiung/piano-infilling-demo">Github repository</a>.
+      </span>
+    </footer>
+  </main>
+  <script
+    src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.21.0/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.1.0"></script>
+
+</body>
+
+</html>
