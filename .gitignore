@@ -1,0 +1,9 @@
+__pycache__/
+dataset*
+pyenv/
+activate
+Transformer/
+trained-model/
+dictionary.pickle
+worded_data.pickle
+song*
