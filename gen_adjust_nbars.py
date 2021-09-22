@@ -21,11 +21,12 @@ np.set_printoptions(threshold=sys.maxsize)
 
 parser = argparse.ArgumentParser(description='')
 
+project_dir = "/screamlab/home/tanch/variable-length-piano-expansion"
 # training setup
-parser.add_argument('--dict-file', type=str, default='/home/csc63182/NAS-189/homes/csc63182/data/remi-1700/predict-middle-notes/dictionary.pickle')
-parser.add_argument('--data-file', type=str, default='/home/csc63182/NAS-189/homes/csc63182/data/remi-1700/predict-middle-notes/worded_data.pickle')
+parser.add_argument('--dict-file', type=str, default=f'{project_dir}/dictionary.pickle')
+parser.add_argument('--data-file', type=str, default=f'{project_dir}/worded_data.pickle')
 parser.add_argument('--train', default=False, action='store_true')
-parser.add_argument('--save-path', type=str, default="/home/csc63182/NAS-189/homes/csc63182/data/remi-1700/predict-middle-notes/trained-models/partial-target-test")
+parser.add_argument('--save-path', type=str, default=f"{project_dir}/trained-models/partial-target-test")
 parser.add_argument('--batch-size', type=int, default=6)
 # parser.add_argument('--target-max-percent', type=float, default=0.2, help="Up to `valid_seq_len * target_max_percent` tokens will be masked out for prediction")
 parser.add_argument('--n-step-bars', type=int, default=8, help='how many bars to step before next training data fetching (the smaller the more training data)')
@@ -34,9 +35,10 @@ parser.add_argument('--train-epochs', type=int, default=2000, help='number of tr
 parser.add_argument('--init-lr', type=float, default=1e-4, help='initial learning rate')
 
 # for prediction phase
-parser.add_argument('--test-data-file', type=str, default='/home/csc63182/NAS-189/homes/csc63182/data/remi-1700/predict-middle-notes-test/worded_data.pickle')
-parser.add_argument('--ckpt-path', type=str, default="/home/csc63182/NAS-189/homes/csc63182/data/remi-1700/predict-middle-notes/trained-models/short-target-mapping/loss34.ckpt")
+parser.add_argument('--test-data-file', type=str, default=f'{project_dir}/worded_data.pickle')
+parser.add_argument('--ckpt-path', type=str, default=f"{project_dir}/trained-model/pretrain.ckpt")
 parser.add_argument('--song-idx', type=int, default=170)
+parser.add_argument('--target_file', type=str, default=f"{project_dir}/expand_target_list.txt")
 
 args = parser.parse_args()
 

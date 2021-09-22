@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,14 +18,14 @@
 
 <body>
   <header class="page-header">
-    <h1 class="">Variable-Length Piano Infilling</h1>
-    <h2 class="">Fill in the gap between the past and the future contexts with different number of notes</h2>
+    <h1 class="">Music Expansion with Variable-Length Piano Infilling</h1>
+    <h2 class="">Demo of music expansion with the model proposed in "Variable-Length Music Score Infilling via XLNet and Musically Specialized Positional Encoding"</h2>
     <a class="page-header__link" target='_blank' href="https://github.com/reichang182/variable-length-piano-infilling">
       Github</a>
     <a class="page-header__link" target='_blank' href="https://arxiv.org/pdf/2108.05064.pdf">
       Paper</a>
-
   </header>
+
   <main>
     <section id="inpainted-music">
       <h2>Music infilled by different models</h2>
@@ -33,190 +34,420 @@
         and FELIX tend to generate much shorter segments.</p>
       <p>Note: If you are browsing this page using an iPhone, please remember to turn the silent mode off through the
         switch on the side of your iPhone.</p>
-      <section id="inpainted-music-song1">
-        <h3>Song 01</h3>
-        <div class='anchor-container'>
-          <a class='selected'
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song01/song01_Ours_2track.midi">Ours</a>
-          <a
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song01/song01_FELIX_2track.midi">FELIX</a>
-          <a
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song01/song01_ILM_2track.midi">ILM</a>
-        </div>
-        <midi-visualizer id='inpainted-music-song1-visualizer'
-          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song01/song01_Ours_2track.midi">
-        </midi-visualizer>
-        <midi-player id='inpainted-music-song1-player'
-          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song01/song01_Ours_2track.midi"
-          sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
-          visualizer="#inpainted-music-song1-visualizer">
-        </midi-player>
-      </section>
-      <section id="inpainted-music-song2">
-        <h3>Song 02</h3>
-        <div class='anchor-container'>
-          <a class='selected'
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song02/song02_Ours_2track.midi">Ours</a>
-          <a
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song02/song02_FELIX_2track.midi">FELIX</a>
-          <a
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song02/song02_ILM_2track.midi">ILM</a>
-        </div>
-        <midi-visualizer id='inpainted-music-song2-visualizer'
-          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song02/song02_Ours_2track.midi">
-        </midi-visualizer>
-        <midi-player id='inpainted-music-song2-player'
-          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song02/song02_Ours_2track.midi"
-          sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
-          visualizer="#inpainted-music-song2-visualizer">
-        </midi-player>
-      </section>
-      <section id="inpainted-music-song3">
-        <h3>Song 03</h3>
-        <div class='anchor-container'>
-          <a class='selected'
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song03/song03_Ours_2track.midi">Ours</a>
-          <a
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song03/song03_FELIX_2track.midi">FELIX</a>
-          <a
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song03/song03_ILM_2track.midi">ILM</a>
-        </div>
-        <midi-visualizer id='inpainted-music-song3-visualizer'
-          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song03/song03_Ours_2track.midi">
-        </midi-visualizer>
-        <midi-player id='inpainted-music-song3-player'
-          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song03/song03_Ours_2track.midi"
-          sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
-          visualizer="#inpainted-music-song3-visualizer">
-        </midi-player>
-      </section>
-      <section id="inpainted-music-song4">
-        <h3>Song 04</h3>
-        <div class='anchor-container'>
-          <a class='selected'
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song04/song04_Ours_2track.midi">Ours</a>
-          <a
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song04/song04_FELIX_2track.midi">FELIX</a>
-          <a
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song04/song04_ILM_2track.midi">ILM</a>
-        </div>
-        <midi-visualizer id='inpainted-music-song4-visualizer'
-          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song04/song04_Ours_2track.midi">
-        </midi-visualizer>
-        <midi-player id='inpainted-music-song4-player'
-          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/inpainted-music/song04/song04_Ours_2track.midi"
-          sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
-          visualizer="#inpainted-music-song4-visualizer">
-        </midi-player>
-      </section>
+
+      <h2>Results of expanding <em>on the boundary</em> are better than <em>not on the boundary</em></h2>
+      
+<section id="inpainted-music-song-325">
+  <h3>Song 325</h3>
+  <div class='anchor-container'>
+    <a class='selected'
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_325_origin.midi">Origin</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_325_bd.midi">On Boundary</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_325_notbd.midi">Not On Boundary</a>
+  </div>
+  <midi-visualizer id='inpainted-music-song-325-visualizer'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_325_origin.midi">
+  </midi-visualizer>
+  <midi-player id='inpainted-music-song-325-player'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_325_origin.midi"
+    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+    visualizer="#inpainted-music-song-325-visualizer">
+  </midi-player>
+</section>
+
+<section id="inpainted-music-song-700">
+  <h3>Song 700</h3>
+  <div class='anchor-container'>
+    <a class='selected'
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_700_origin.midi">Origin</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_700_bd.midi">On Boundary</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_700_notbd.midi">Not On Boundary</a>
+  </div>
+  <midi-visualizer id='inpainted-music-song-700-visualizer'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_700_origin.midi">
+  </midi-visualizer>
+  <midi-player id='inpainted-music-song-700-player'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_700_origin.midi"
+    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+    visualizer="#inpainted-music-song-700-visualizer">
+  </midi-player>
+</section>
+
+<section id="inpainted-music-song-1775">
+  <h3>Song 1775</h3>
+  <div class='anchor-container'>
+    <a class='selected'
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_1775_origin.midi">Origin</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_1775_bd.midi">On Boundary</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_1775_notbd.midi">Not On Boundary</a>
+  </div>
+  <midi-visualizer id='inpainted-music-song-1775-visualizer'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_1775_origin.midi">
+  </midi-visualizer>
+  <midi-player id='inpainted-music-song-1775-player'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_1775_origin.midi"
+    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+    visualizer="#inpainted-music-song-1775-visualizer">
+  </midi-player>
+</section>
+
+<section id="inpainted-music-song-2000">
+  <h3>Song 2000</h3>
+  <div class='anchor-container'>
+    <a class='selected'
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_2000_origin.midi">Origin</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_2000_bd.midi">On Boundary</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_2000_notbd.midi">Not On Boundary</a>
+  </div>
+  <midi-visualizer id='inpainted-music-song-2000-visualizer'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_2000_origin.midi">
+  </midi-visualizer>
+  <midi-player id='inpainted-music-song-2000-player'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_2000_origin.midi"
+    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+    visualizer="#inpainted-music-song-2000-visualizer">
+  </midi-player>
+</section>
+
+<section id="inpainted-music-song-3225">
+  <h3>Song 3225</h3>
+  <div class='anchor-container'>
+    <a class='selected'
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3225_origin.midi">Origin</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3225_bd.midi">On Boundary</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3225_notbd.midi">Not On Boundary</a>
+  </div>
+  <midi-visualizer id='inpainted-music-song-3225-visualizer'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3225_origin.midi">
+  </midi-visualizer>
+  <midi-player id='inpainted-music-song-3225-player'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3225_origin.midi"
+    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+    visualizer="#inpainted-music-song-3225-visualizer">
+  </midi-player>
+</section>
+
+<section id="inpainted-music-song-3750">
+  <h3>Song 3750</h3>
+  <div class='anchor-container'>
+    <a class='selected'
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3750_origin.midi">Origin</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3750_bd.midi">On Boundary</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3750_notbd.midi">Not On Boundary</a>
+  </div>
+  <midi-visualizer id='inpainted-music-song-3750-visualizer'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3750_origin.midi">
+  </midi-visualizer>
+  <midi-player id='inpainted-music-song-3750-player'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3750_origin.midi"
+    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+    visualizer="#inpainted-music-song-3750-visualizer">
+  </midi-player>
+</section>
+
+<section id="inpainted-music-song-4550">
+  <h3>Song 4550</h3>
+  <div class='anchor-container'>
+    <a class='selected'
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_4550_origin.midi">Origin</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_4550_bd.midi">On Boundary</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_4550_notbd.midi">Not On Boundary</a>
+  </div>
+  <midi-visualizer id='inpainted-music-song-4550-visualizer'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_4550_origin.midi">
+  </midi-visualizer>
+  <midi-player id='inpainted-music-song-4550-player'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_4550_origin.midi"
+    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+    visualizer="#inpainted-music-song-4550-visualizer">
+  </midi-player>
+</section>
+
+<section id="inpainted-music-song-5500">
+  <h3>Song 5500</h3>
+  <div class='anchor-container'>
+    <a class='selected'
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_5500_origin.midi">Origin</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_5500_bd.midi">On Boundary</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_5500_notbd.midi">Not On Boundary</a>
+  </div>
+  <midi-visualizer id='inpainted-music-song-5500-visualizer'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_5500_origin.midi">
+  </midi-visualizer>
+  <midi-player id='inpainted-music-song-5500-player'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_5500_origin.midi"
+    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+    visualizer="#inpainted-music-song-5500-visualizer">
+  </midi-player>
+</section>
+
+
+      <h2>Results of expanding <em>not on the boundary</em> are better than <em>on the boundary</em></h2>
+      
+<section id="inpainted-music-song-600">
+  <h3>Song 600</h3>
+  <div class='anchor-container'>
+    <a class='selected'
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_600_origin.midi">Origin</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_600_bd.midi">On Boundary</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_600_notbd.midi">Not On Boundary</a>
+  </div>
+  <midi-visualizer id='inpainted-music-song-600-visualizer'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_600_origin.midi">
+  </midi-visualizer>
+  <midi-player id='inpainted-music-song-600-player'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_600_origin.midi"
+    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+    visualizer="#inpainted-music-song-600-visualizer">
+  </midi-player>
+</section>
+
+<section id="inpainted-music-song-3325">
+  <h3>Song 3325</h3>
+  <div class='anchor-container'>
+    <a class='selected'
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3325_origin.midi">Origin</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3325_bd.midi">On Boundary</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3325_notbd.midi">Not On Boundary</a>
+  </div>
+  <midi-visualizer id='inpainted-music-song-3325-visualizer'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3325_origin.midi">
+  </midi-visualizer>
+  <midi-player id='inpainted-music-song-3325-player'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3325_origin.midi"
+    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+    visualizer="#inpainted-music-song-3325-visualizer">
+  </midi-player>
+</section>
+
+
+      <h2>Performance of results is almost the same <em>good</em></h2>
+      
+<section id="inpainted-music-song-300">
+  <h3>Song 300</h3>
+  <div class='anchor-container'>
+    <a class='selected'
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_300_origin.midi">Origin</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_300_bd.midi">On Boundary</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_300_notbd.midi">Not On Boundary</a>
+  </div>
+  <midi-visualizer id='inpainted-music-song-300-visualizer'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_300_origin.midi">
+  </midi-visualizer>
+  <midi-player id='inpainted-music-song-300-player'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_300_origin.midi"
+    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+    visualizer="#inpainted-music-song-300-visualizer">
+  </midi-player>
+</section>
+
+<section id="inpainted-music-song-550">
+  <h3>Song 550</h3>
+  <div class='anchor-container'>
+    <a class='selected'
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_550_origin.midi">Origin</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_550_bd.midi">On Boundary</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_550_notbd.midi">Not On Boundary</a>
+  </div>
+  <midi-visualizer id='inpainted-music-song-550-visualizer'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_550_origin.midi">
+  </midi-visualizer>
+  <midi-player id='inpainted-music-song-550-player'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_550_origin.midi"
+    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+    visualizer="#inpainted-music-song-550-visualizer">
+  </midi-player>
+</section>
+
+<section id="inpainted-music-song-2825">
+  <h3>Song 2825</h3>
+  <div class='anchor-container'>
+    <a class='selected'
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_2825_origin.midi">Origin</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_2825_bd.midi">On Boundary</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_2825_notbd.midi">Not On Boundary</a>
+  </div>
+  <midi-visualizer id='inpainted-music-song-2825-visualizer'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_2825_origin.midi">
+  </midi-visualizer>
+  <midi-player id='inpainted-music-song-2825-player'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_2825_origin.midi"
+    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+    visualizer="#inpainted-music-song-2825-visualizer">
+  </midi-player>
+</section>
+
+<section id="inpainted-music-song-3350">
+  <h3>Song 3350</h3>
+  <div class='anchor-container'>
+    <a class='selected'
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3350_origin.midi">Origin</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3350_bd.midi">On Boundary</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3350_notbd.midi">Not On Boundary</a>
+  </div>
+  <midi-visualizer id='inpainted-music-song-3350-visualizer'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3350_origin.midi">
+  </midi-visualizer>
+  <midi-player id='inpainted-music-song-3350-player'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3350_origin.midi"
+    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+    visualizer="#inpainted-music-song-3350-visualizer">
+  </midi-player>
+</section>
+
+<section id="inpainted-music-song-3725">
+  <h3>Song 3725</h3>
+  <div class='anchor-container'>
+    <a class='selected'
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3725_origin.midi">Origin</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3725_bd.midi">On Boundary</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3725_notbd.midi">Not On Boundary</a>
+  </div>
+  <midi-visualizer id='inpainted-music-song-3725-visualizer'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3725_origin.midi">
+  </midi-visualizer>
+  <midi-player id='inpainted-music-song-3725-player'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_3725_origin.midi"
+    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+    visualizer="#inpainted-music-song-3725-visualizer">
+  </midi-player>
+</section>
+
+<section id="inpainted-music-song-4800">
+  <h3>Song 4800</h3>
+  <div class='anchor-container'>
+    <a class='selected'
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_4800_origin.midi">Origin</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_4800_bd.midi">On Boundary</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_4800_notbd.midi">Not On Boundary</a>
+  </div>
+  <midi-visualizer id='inpainted-music-song-4800-visualizer'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_4800_origin.midi">
+  </midi-visualizer>
+  <midi-player id='inpainted-music-song-4800-player'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_4800_origin.midi"
+    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+    visualizer="#inpainted-music-song-4800-visualizer">
+  </midi-player>
+</section>
+
+<section id="inpainted-music-song-1000">
+  <h3>Song 1000</h3>
+  <div class='anchor-container'>
+    <a class='selected'
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_1000_origin.midi">Origin</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_1000_bd.midi">On Boundary</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_1000_notbd.midi">Not On Boundary</a>
+  </div>
+  <midi-visualizer id='inpainted-music-song-1000-visualizer'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_1000_origin.midi">
+  </midi-visualizer>
+  <midi-player id='inpainted-music-song-1000-player'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_1000_origin.midi"
+    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+    visualizer="#inpainted-music-song-1000-visualizer">
+  </midi-player>
+</section>
+
+
+      <h2>Performance of results is almost the same <em>bad</em></h2>
+      
+<section id="inpainted-music-song-450">
+  <h3>Song 450</h3>
+  <div class='anchor-container'>
+    <a class='selected'
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_450_origin.midi">Origin</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_450_bd.midi">On Boundary</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_450_notbd.midi">Not On Boundary</a>
+  </div>
+  <midi-visualizer id='inpainted-music-song-450-visualizer'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_450_origin.midi">
+  </midi-visualizer>
+  <midi-player id='inpainted-music-song-450-player'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_450_origin.midi"
+    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+    visualizer="#inpainted-music-song-450-visualizer">
+  </midi-player>
+</section>
+
+<section id="inpainted-music-song-2125">
+  <h3>Song 2125</h3>
+  <div class='anchor-container'>
+    <a class='selected'
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_2125_origin.midi">Origin</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_2125_bd.midi">On Boundary</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_2125_notbd.midi">Not On Boundary</a>
+  </div>
+  <midi-visualizer id='inpainted-music-song-2125-visualizer'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_2125_origin.midi">
+  </midi-visualizer>
+  <midi-player id='inpainted-music-song-2125-player'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_2125_origin.midi"
+    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+    visualizer="#inpainted-music-song-2125-visualizer">
+  </midi-player>
+</section>
+
+<section id="inpainted-music-song-4025">
+  <h3>Song 4025</h3>
+  <div class='anchor-container'>
+    <a class='selected'
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_4025_origin.midi">Origin</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_4025_bd.midi">On Boundary</a>
+    <a
+      midi-url="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_4025_notbd.midi">Not On Boundary</a>
+  </div>
+  <midi-visualizer id='inpainted-music-song-4025-visualizer'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_4025_origin.midi">
+  </midi-visualizer>
+  <midi-player id='inpainted-music-song-4025-player'
+    src="http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion/song_4025_origin.midi"
+    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+    visualizer="#inpainted-music-song-4025-visualizer">
+  </midi-player>
+</section>
+
     </section>
 
-    <section id='controll-number-of-bars'>
-      <h2>Music infilled by our model to have a different number of bars</h2>
-      <p>We can decide how many bars we want our model to infill in the missing segment. Here, we provide examples of
-        our
-        models to generate 1 bar to 4 bars to connect the contexts.</p>
-      <section id="controll-number-of-bars-song1">
-        <h3>Song 01</h3>
-        <div class='anchor-container'>
-          <a class='selected'
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song01/song01_13bars_2track.midi">1
-            Bar</a>
-          <a
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song01/song01_14bars_2track.midi">2
-            Bars</a>
-          <a
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song01/song01_15bars_2track.midi">3
-            Bars</a>
-          <a
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song01/song01_16bars_2track.midi">4
-            Bars</a>
-        </div>
-        <midi-visualizer id='controll-number-of-bars-song1-visualizer'
-          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song01/song01_13bars_2track.midi">
-        </midi-visualizer>
-        <midi-player id='controll-number-of-bars-song1-player'
-          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song01/song01_13bars_2track.midi"
-          sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
-          visualizer="#controll-number-of-bars-song1-visualizer">
-        </midi-player>
-      </section>
-      <section id="controll-number-of-bars-song2">
-        <h3>Song 02</h3>
-        <div class='anchor-container'>
-          <a class='selected'
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song02/song02_13bars_2track.midi">1
-            Bar</a>
-          <a
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song02/song02_14bars_2track.midi">2
-            Bars</a>
-          <a
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song02/song02_15bars_2track.midi">3
-            Bars</a>
-          <a
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song02/song02_16bars_2track.midi">4
-            Bars</a>
-        </div>
-        <midi-visualizer id='controll-number-of-bars-song2-visualizer'
-          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song02/song02_13bars_2track.midi">
-        </midi-visualizer>
-        <midi-player id='controll-number-of-bars-song2-player'
-          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song02/song02_13bars_2track.midi"
-          sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
-          visualizer="#controll-number-of-bars-song2-visualizer">
-        </midi-player>
-      </section>
-      <section id="controll-number-of-bars-song3">
-        <h3>Song 03</h3>
-        <div class='anchor-container'>
-          <a class='selected'
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song03/song03_13bars_2track.midi">1
-            Bar</a>
-          <a
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song03/song03_14bars_2track.midi">2
-            Bars</a>
-          <a
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song03/song03_15bars_2track.midi">3
-            Bars</a>
-          <a
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song03/song03_16bars_2track.midi">4
-            Bars</a>
-        </div>
-        <midi-visualizer id='controll-number-of-bars-song3-visualizer'
-          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song03/song03_13bars_2track.midi">
-        </midi-visualizer>
-        <midi-player id='controll-number-of-bars-song3-player'
-          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song03/song03_13bars_2track.midi"
-          sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
-          visualizer="#controll-number-of-bars-song3-visualizer">
-        </midi-player>
-      </section>
-      <section id="controll-number-of-bars-song4">
-        <h3>Song 04</h3>
-        <div class='anchor-container'>
-          <a class='selected'
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song04/song04_13bars_2track.midi">1
-            Bar</a>
-          <a
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song04/song04_14bars_2track.midi">2
-            Bars</a>
-          <a
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song04/song04_15bars_2track.midi">3
-            Bars</a>
-          <a
-            midi-url="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song04/song04_16bars_2track.midi">4
-            Bars</a>
-        </div>
-        <midi-visualizer id='controll-number-of-bars-song4-visualizer'
-          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song04/song04_13bars_2track.midi">
-        </midi-visualizer>
-        <midi-player id='controll-number-of-bars-song4-player'
-          src="https://cdn.jsdelivr.net/gh/jackyhsiung/infilling-demo-page/assets/songs/controll-number-of-bars/song04/song04_13bars_2track.midi"
-          sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
-          visualizer="#controll-number-of-bars-song4-visualizer">
-        </midi-player>
-      </section>
-    </section>
     <footer class="site-footer">
       <span class="site-footer-credit">We use
         <a target='_blank' href='https://github.com/cifkao/html-midi-player'>html_midi_player</a>

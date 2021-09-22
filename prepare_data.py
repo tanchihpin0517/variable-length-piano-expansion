@@ -431,7 +431,7 @@ def prepare_data_for_training(data_file, e2w=None, w2e=None, is_train=True, n_st
 
 
     # shuffle
-    xs = np.array(xs)
+    xs = np.array(xs, dtype=object)
     if is_train:
         index = np.arange(len(xs))
         np.random.shuffle(index)

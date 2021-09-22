@@ -364,6 +364,9 @@ class XLNetForPredictingMiddleNotes(torch.nn.Module):
         prime = np.concatenate([datum[0, :target_start], datum[0, target_start + target_len :]], axis=0)
         to_midi(prime, self.w2e, os.path.join(save_midi_folder, "song%d_prime_len%d.midi" % (song_idx, seq_len - target_len)))
 
+        # Save origin
+        to_midi(datum[0, :], self.w2e, os.path.join(save_midi_folder, "song%d_origin_len%d.midi" % (song_idx, seq_len - target_len)))
+
         # Save absolute Bar IDs
         bar_ids_abs = np.copy(datum[:, :, 1])
 

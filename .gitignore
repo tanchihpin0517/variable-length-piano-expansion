@@ -1,9 +1,12 @@
 __pycache__/
 dataset*
-pyenv/
+env/
 activate
 Transformer/
 trained-model/
 dictionary.pickle
 worded_data.pickle
-song*
+log*
+expand_result/
+result/
+expand_target_list_test.txt
