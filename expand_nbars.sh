@@ -1,5 +1,5 @@
-CKPTS=("loss26" "loss28" "loss30" "loss32" "loss34")
-#CKPTS=("loss26")
+#CKPTS=("loss26" "loss28" "loss30" "loss32" "loss34")
+CKPTS=("loss30")
 for CKPT in ${CKPTS[@]}; do
     python ./expand_nbars.py \
         --ckpt-path ./trained-model/$CKPT.ckpt \

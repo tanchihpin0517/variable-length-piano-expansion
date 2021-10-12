@@ -16,7 +16,7 @@ print(args.index_file)
 print(args.result_file)
 
 def main():
-    on_bd, not_on_bd, same_good, same_bad = read_result_file(args.result_file)
+    on_bd, not_on_bd, same_good, same_bad, all_files = read_result_file(args.result_file)
     if on_bd[0] == "":
         on_bd = []
     if not_on_bd[0] == "":
@@ -29,6 +29,7 @@ def main():
     not_on_bd_content = []
     same_good_content = []
     same_bad_content = []
+    all_files_content = []
 
     # clean up the assets folder
     for old_file in os.listdir(args.dist_dir):
@@ -36,6 +37,33 @@ def main():
             os.remove(os.path.join(args.dist_dir, old_file))
             print("remove:", os.path.join(args.dist_dir, old_file))
 
+    print("all files")
+    for song_idx in all_files:
+        midi_origin = os.path.join(
+            args.src_dir,
+            song_dir(song_idx, on_bd=True),
+            f'song_{song_idx}_origin.midi')
+        midi_bd = os.path.join(
+            args.src_dir,
+            song_dir(song_idx, on_bd=True),
+            f'song_{song_idx}_result_0.midi')
+        midi_notbd = os.path.join(
+            args.src_dir,
+            song_dir(song_idx, on_bd=False),
+            f'song_{song_idx}_result_0.midi')
+
+        # copy midi into assets folder
+        shutil.copy2(midi_origin, os.path.join(args.dist_dir, f"song_{song_idx}_origin.midi"))
+        shutil.copy2(midi_bd, os.path.join(args.dist_dir, f"song_{song_idx}_bd.midi"))
+        shutil.copy2(midi_notbd, os.path.join(args.dist_dir, f"song_{song_idx}_notbd.midi"))
+        print("copy:", os.path.join(args.dist_dir, f"song_{song_idx}_origin.midi"))
+        print("copy:", os.path.join(args.dist_dir, f"song_{song_idx}_bd.midi"))
+        print("copy:", os.path.join(args.dist_dir, f"song_{song_idx}_notbd.midi"))
+
+        # generate content block
+        all_files_content.append(content_block_from_template(song_idx))
+
+    """
     print("on boundary")
     for song_idx in on_bd:
         midi_origin = os.path.join(
@@ -139,6 +167,7 @@ def main():
 
         # generate content block
         same_bad_content.append(content_block_from_template(song_idx))
+    """
 
     # write context into html file
     with open(args.index_file, 'w') as f:
@@ -147,6 +176,7 @@ def main():
             "".join(not_on_bd_content),
             "".join(same_good_content),
             "".join(same_bad_content),
+            "".join(all_files_content),
         ))
         print("generate index.html:", args.index_file)
 
@@ -156,12 +186,14 @@ def read_result_file(file):
         not_on_bd_line = f.readline().strip()
         same_good_line = f.readline().strip()
         same_bad_line = f.readline().strip()
+        all_file_line = f.readline().strip()
 
         on_bd = on_bd_line.split(':')[1].split(',')
         not_on_bd = not_on_bd_line.split(':')[1].split(',')
         same_good = same_good_line.split(':')[1].split(',')
         same_bad = same_bad_line.split(':')[1].split(',')
-    return on_bd, not_on_bd, same_good, same_bad
+        all_files = all_file_line.split(':')[1].split(',')
+    return on_bd, not_on_bd, same_good, same_bad, all_files
 
 def song_dir(song_idx, on_bd: bool):
     if not hasattr(song_dir, 'song_dir_dict'):
@@ -203,7 +235,7 @@ f"""
 </section>
 """
 
-def index_with_content(on_bd, not_on_bd, same_good, same_bad):
+def index_with_content(on_bd, not_on_bd, same_good, same_bad, all_files):
     return \
 f"""
 <!DOCTYPE html>
@@ -253,6 +285,9 @@ f"""
 
       <h2>Performance of results is almost the same <em>bad</em></h2>
       {same_bad}
+
+      <h2>Songs</h2>
+      {all_files}
     </section>
 
     <footer class="site-footer">
