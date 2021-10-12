@@ -18,46 +18,29 @@
 
 <body>
   <header class="page-header">
-    <h1 class="">Music Expansion with Variable-Length Piano Infilling</h1>
-    <h2 class="">Demo of music expansion with the model proposed in "Variable-Length Music Score Infilling via XLNet and Musically Specialized Positional Encoding"</h2>
-    <a class="page-header__link" target='_blank' href="https://github.com/reichang182/variable-length-piano-infilling">
+    <h1 class="">Music Score Expansion with Variable-Length Infilling</h1>
+    <h2 class="">Demo of music score expansion with the model proposed in "Variable-Length Music Score Infilling via XLNet and Musically Specialized Positional Encoding"</h2>
+    <a class="page-header__link" target='_blank' href="https://github.com/tanchihpin0517/variable-length-piano-expansion">
       Github</a>
-    <a class="page-header__link" target='_blank' href="https://arxiv.org/pdf/2108.05064.pdf">
+    <a class="page-header__link" target='_blank' href="">
       Paper</a>
   </header>
 
   <main>
     <section id="inpainted-music">
-      <h2>Music infilled by different models</h2>
-      <p>Examples of the infilling result of our model and the two baselines when the past and the future contexts are
-        four bars apart. While our model can indeed infill the missing segment with four bars long as expected, both ILM
-        and FELIX tend to generate much shorter segments.</p>
+      <h2>Music expanded by the variable-length infilling model</h2>
+      <p>These songs are the original and expended music in our work.</p>
       <p>Note: If you are browsing this page using an iPhone, please remember to turn the silent mode off through the
         switch on the side of your iPhone.</p>
 
-      <h2>Results of expanding <em>on the boundary</em> are better than <em>not on the boundary</em></h2>
-      
-
-      <h2>Results of expanding <em>not on the boundary</em> are better than <em>on the boundary</em></h2>
-      
-
-      <h2>Performance of results is almost the same <em>good</em></h2>
-      
-
-      <h2>Performance of results is almost the same <em>bad</em></h2>
-      
-
-      <h2>Songs</h2>
       
 <section id="inpainted-music-song-300">
-  <h3>Song 300</h3>
+  <h3>Song 1</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_300_origin.midi">Origin</a>
     <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_300_bd.midi">On Boundary</a>
-    <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_300_notbd.midi">Not On Boundary</a>
+      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_300_bd.midi">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-300-visualizer'
     src="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_300_origin.midi">
@@ -70,14 +53,12 @@
 </section>
 
 <section id="inpainted-music-song-325">
-  <h3>Song 325</h3>
+  <h3>Song 2</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_325_origin.midi">Origin</a>
     <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_325_bd.midi">On Boundary</a>
-    <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_325_notbd.midi">Not On Boundary</a>
+      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_325_bd.midi">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-325-visualizer'
     src="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_325_origin.midi">
@@ -90,14 +71,12 @@
 </section>
 
 <section id="inpainted-music-song-450">
-  <h3>Song 450</h3>
+  <h3>Song 3</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_450_origin.midi">Origin</a>
     <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_450_bd.midi">On Boundary</a>
-    <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_450_notbd.midi">Not On Boundary</a>
+      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_450_bd.midi">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-450-visualizer'
     src="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_450_origin.midi">
@@ -110,14 +89,12 @@
 </section>
 
 <section id="inpainted-music-song-550">
-  <h3>Song 550</h3>
+  <h3>Song 4</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_550_origin.midi">Origin</a>
     <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_550_bd.midi">On Boundary</a>
-    <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_550_notbd.midi">Not On Boundary</a>
+      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_550_bd.midi">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-550-visualizer'
     src="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_550_origin.midi">
@@ -130,14 +107,12 @@
 </section>
 
 <section id="inpainted-music-song-600">
-  <h3>Song 600</h3>
+  <h3>Song 5</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_600_origin.midi">Origin</a>
     <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_600_bd.midi">On Boundary</a>
-    <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_600_notbd.midi">Not On Boundary</a>
+      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_600_bd.midi">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-600-visualizer'
     src="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_600_origin.midi">
@@ -150,14 +125,12 @@
 </section>
 
 <section id="inpainted-music-song-700">
-  <h3>Song 700</h3>
+  <h3>Song 6</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_700_origin.midi">Origin</a>
     <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_700_bd.midi">On Boundary</a>
-    <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_700_notbd.midi">Not On Boundary</a>
+      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_700_bd.midi">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-700-visualizer'
     src="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_700_origin.midi">
@@ -170,14 +143,12 @@
 </section>
 
 <section id="inpainted-music-song-1000">
-  <h3>Song 1000</h3>
+  <h3>Song 7</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_1000_origin.midi">Origin</a>
     <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_1000_bd.midi">On Boundary</a>
-    <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_1000_notbd.midi">Not On Boundary</a>
+      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_1000_bd.midi">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-1000-visualizer'
     src="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_1000_origin.midi">
@@ -190,14 +161,12 @@
 </section>
 
 <section id="inpainted-music-song-2125">
-  <h3>Song 2125</h3>
+  <h3>Song 8</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_2125_origin.midi">Origin</a>
     <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_2125_bd.midi">On Boundary</a>
-    <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_2125_notbd.midi">Not On Boundary</a>
+      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_2125_bd.midi">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-2125-visualizer'
     src="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_2125_origin.midi">
@@ -210,14 +179,12 @@
 </section>
 
 <section id="inpainted-music-song-3225">
-  <h3>Song 3225</h3>
+  <h3>Song 9</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_3225_origin.midi">Origin</a>
     <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_3225_bd.midi">On Boundary</a>
-    <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_3225_notbd.midi">Not On Boundary</a>
+      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_3225_bd.midi">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-3225-visualizer'
     src="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_3225_origin.midi">
@@ -230,14 +197,12 @@
 </section>
 
 <section id="inpainted-music-song-3325">
-  <h3>Song 3325</h3>
+  <h3>Song 10</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_3325_origin.midi">Origin</a>
     <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_3325_bd.midi">On Boundary</a>
-    <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_3325_notbd.midi">Not On Boundary</a>
+      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_3325_bd.midi">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-3325-visualizer'
     src="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_3325_origin.midi">
@@ -250,14 +215,12 @@
 </section>
 
 <section id="inpainted-music-song-3725">
-  <h3>Song 3725</h3>
+  <h3>Song 11</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_3725_origin.midi">Origin</a>
     <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_3725_bd.midi">On Boundary</a>
-    <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_3725_notbd.midi">Not On Boundary</a>
+      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_3725_bd.midi">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-3725-visualizer'
     src="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_3725_origin.midi">
@@ -270,14 +233,12 @@
 </section>
 
 <section id="inpainted-music-song-3750">
-  <h3>Song 3750</h3>
+  <h3>Song 12</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_3750_origin.midi">Origin</a>
     <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_3750_bd.midi">On Boundary</a>
-    <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_3750_notbd.midi">Not On Boundary</a>
+      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_3750_bd.midi">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-3750-visualizer'
     src="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_3750_origin.midi">
@@ -290,14 +251,12 @@
 </section>
 
 <section id="inpainted-music-song-4025">
-  <h3>Song 4025</h3>
+  <h3>Song 13</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_4025_origin.midi">Origin</a>
     <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_4025_bd.midi">On Boundary</a>
-    <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_4025_notbd.midi">Not On Boundary</a>
+      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_4025_bd.midi">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-4025-visualizer'
     src="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_4025_origin.midi">
@@ -310,14 +269,12 @@
 </section>
 
 <section id="inpainted-music-song-4550">
-  <h3>Song 4550</h3>
+  <h3>Song 14</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_4550_origin.midi">Origin</a>
     <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_4550_bd.midi">On Boundary</a>
-    <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_4550_notbd.midi">Not On Boundary</a>
+      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_4550_bd.midi">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-4550-visualizer'
     src="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_4550_origin.midi">
@@ -330,14 +287,12 @@
 </section>
 
 <section id="inpainted-music-song-4800">
-  <h3>Song 4800</h3>
+  <h3>Song 15</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_4800_origin.midi">Origin</a>
     <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_4800_bd.midi">On Boundary</a>
-    <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_4800_notbd.midi">Not On Boundary</a>
+      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_4800_bd.midi">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-4800-visualizer'
     src="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_4800_origin.midi">
@@ -350,14 +305,12 @@
 </section>
 
 <section id="inpainted-music-song-6700">
-  <h3>Song 6700</h3>
+  <h3>Song 16</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_6700_origin.midi">Origin</a>
     <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_6700_bd.midi">On Boundary</a>
-    <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_6700_notbd.midi">Not On Boundary</a>
+      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_6700_bd.midi">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-6700-visualizer'
     src="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_6700_origin.midi">
@@ -370,14 +323,12 @@
 </section>
 
 <section id="inpainted-music-song-6900">
-  <h3>Song 6900</h3>
+  <h3>Song 17</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_6900_origin.midi">Origin</a>
     <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_6900_bd.midi">On Boundary</a>
-    <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_6900_notbd.midi">Not On Boundary</a>
+      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_6900_bd.midi">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-6900-visualizer'
     src="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_6900_origin.midi">
@@ -390,14 +341,12 @@
 </section>
 
 <section id="inpainted-music-song-8175">
-  <h3>Song 8175</h3>
+  <h3>Song 18</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_8175_origin.midi">Origin</a>
     <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_8175_bd.midi">On Boundary</a>
-    <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_8175_notbd.midi">Not On Boundary</a>
+      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_8175_bd.midi">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-8175-visualizer'
     src="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_8175_origin.midi">
@@ -410,14 +359,12 @@
 </section>
 
 <section id="inpainted-music-song-10600">
-  <h3>Song 10600</h3>
+  <h3>Song 19</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_10600_origin.midi">Origin</a>
     <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_10600_bd.midi">On Boundary</a>
-    <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_10600_notbd.midi">Not On Boundary</a>
+      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_10600_bd.midi">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-10600-visualizer'
     src="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_10600_origin.midi">
@@ -430,14 +377,12 @@
 </section>
 
 <section id="inpainted-music-song-11050">
-  <h3>Song 11050</h3>
+  <h3>Song 20</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_11050_origin.midi">Origin</a>
     <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_11050_bd.midi">On Boundary</a>
-    <a
-      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_11050_notbd.midi">Not On Boundary</a>
+      midi-url="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_11050_bd.midi">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-11050-visualizer'
     src="https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion/song_11050_origin.midi">

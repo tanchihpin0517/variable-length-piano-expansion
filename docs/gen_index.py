@@ -205,24 +205,24 @@ def song_dir(song_idx, on_bd: bool):
     else:
         return song_dir.song_dir_dict["_".join([song_idx, "notbd"])]
 
+song_absolute_id = 0
 def content_block_from_template(song_idx):
+    global song_absolute_id
     #song_idx = f"{song_idx:02d}"
     dir_url = "https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion"
     #dir_url = "http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion"
     bd_url = f"{dir_url}/song_{song_idx}_bd.midi"
-    notbd_url = f"{dir_url}/song_{song_idx}_notbd.midi"
     origin_url = f"{dir_url}/song_{song_idx}_origin.midi"
+    song_absolute_id += 1
     return \
 f"""
 <section id="inpainted-music-song-{song_idx}">
-  <h3>Song {song_idx}</h3>
+  <h3>Song {song_absolute_id}</h3>
   <div class='anchor-container'>
     <a class='selected'
       midi-url="{origin_url}">Origin</a>
     <a
-      midi-url="{bd_url}">On Boundary</a>
-    <a
-      midi-url="{notbd_url}">Not On Boundary</a>
+      midi-url="{bd_url}">Expended</a>
   </div>
   <midi-visualizer id='inpainted-music-song-{song_idx}-visualizer'
     src="{origin_url}">
@@ -234,6 +234,36 @@ f"""
   </midi-player>
 </section>
 """
+
+#def content_block_from_template(song_idx):
+#    #song_idx = f"{song_idx:02d}"
+#    dir_url = "https://cdn.jsdelivr.net/gh/tanchihpin0517/variable-length-piano-expansion/docs/assets/songs/expansion"
+#    #dir_url = "http://screamviolin.csie.ncku.edu.tw:8000/assets/songs/expansion"
+#    bd_url = f"{dir_url}/song_{song_idx}_bd.midi"
+#    notbd_url = f"{dir_url}/song_{song_idx}_notbd.midi"
+#    origin_url = f"{dir_url}/song_{song_idx}_origin.midi"
+#    return \
+#f"""
+#<section id="inpainted-music-song-{song_idx}">
+#  <h3>Song {song_idx}</h3>
+#  <div class='anchor-container'>
+#    <a class='selected'
+#      midi-url="{origin_url}">Origin</a>
+#    <a
+#      midi-url="{bd_url}">On Boundary</a>
+#    <a
+#      midi-url="{notbd_url}">Not On Boundary</a>
+#  </div>
+#  <midi-visualizer id='inpainted-music-song-{song_idx}-visualizer'
+#    src="{origin_url}">
+#  </midi-visualizer>
+#  <midi-player id='inpainted-music-song-{song_idx}-player'
+#    src="{origin_url}"
+#    sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/salamander"
+#    visualizer="#inpainted-music-song-{song_idx}-visualizer">
+#  </midi-player>
+#</section>
+#"""
 
 def index_with_content(on_bd, not_on_bd, same_good, same_bad, all_files):
     return \
@@ -257,36 +287,21 @@ f"""
 
 <body>
   <header class="page-header">
-    <h1 class="">Music Expansion with Variable-Length Piano Infilling</h1>
-    <h2 class="">Demo of music expansion with the model proposed in "Variable-Length Music Score Infilling via XLNet and Musically Specialized Positional Encoding"</h2>
-    <a class="page-header__link" target='_blank' href="https://github.com/reichang182/variable-length-piano-infilling">
+    <h1 class="">Music Score Expansion with Variable-Length Infilling</h1>
+    <h2 class="">Demo of music score expansion with the model proposed in "Variable-Length Music Score Infilling via XLNet and Musically Specialized Positional Encoding"</h2>
+    <a class="page-header__link" target='_blank' href="https://github.com/tanchihpin0517/variable-length-piano-expansion">
       Github</a>
-    <a class="page-header__link" target='_blank' href="https://arxiv.org/pdf/2108.05064.pdf">
+    <a class="page-header__link" target='_blank' href="">
       Paper</a>
   </header>
 
   <main>
     <section id="inpainted-music">
-      <h2>Music infilled by different models</h2>
-      <p>Examples of the infilling result of our model and the two baselines when the past and the future contexts are
-        four bars apart. While our model can indeed infill the missing segment with four bars long as expected, both ILM
-        and FELIX tend to generate much shorter segments.</p>
+      <h2>Music expanded by the variable-length infilling model</h2>
+      <p>These songs are the original and expended music in our work.</p>
       <p>Note: If you are browsing this page using an iPhone, please remember to turn the silent mode off through the
         switch on the side of your iPhone.</p>
 
-      <h2>Results of expanding <em>on the boundary</em> are better than <em>not on the boundary</em></h2>
-      {on_bd}
-
-      <h2>Results of expanding <em>not on the boundary</em> are better than <em>on the boundary</em></h2>
-      {not_on_bd}
-
-      <h2>Performance of results is almost the same <em>good</em></h2>
-      {same_good}
-
-      <h2>Performance of results is almost the same <em>bad</em></h2>
-      {same_bad}
-
-      <h2>Songs</h2>
       {all_files}
     </section>
 
